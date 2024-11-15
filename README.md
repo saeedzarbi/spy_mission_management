@@ -19,9 +19,10 @@ Installation and Setup
 
 1. Clone the Repository
    git clone https://github.com/saeedzarbi/spy_mission_management.git
+   
    cd spy_mission_management
 
-2. Create and Activate a Virtual Environment
+3. Create and Activate a Virtual Environment
 It's recommended to use a virtual environment to manage project dependencies.
 
 On Windows:
