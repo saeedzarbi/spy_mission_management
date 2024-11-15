@@ -17,13 +17,12 @@ Prerequisites
 
 Installation and Setup
 
-1. Clone the Repository
-   git clone https://github.com/saeedzarbi/spy_mission_management.git
-   
-   cd spy_mission_management
 
-3. Create and Activate a Virtual Environment
-It's recommended to use a virtual environment to manage project dependencies.
+-   Clone the Repository
+        git clone https://github.com/saeedzarbi/spy_mission_management.git
+        cd spy_mission_management
+
+-   Create and Activate a Virtual Environment
 
 On Windows:
 
@@ -35,18 +34,18 @@ On macOS/Linux:
     python3 -m venv venv
     source venv/bin/activate
 
-3. Install Dependencies
+-   Install Dependencies
 Install the required Python packages using pip:
 
     pip install -r requirements.txt
 
-4. Initialize the Database
+-   Initialize the Database
 The application uses SQLite for data storage. Initialize the database by running the application once. This will create the spy_mission.db file and populate it with initial data.
 
     python app.py
 After running the above command, you can stop the server by pressing Ctrl+C. The database is now set up with initial users, missions, and equipment.
 
-6. Run the Application
+-   Run the Application
 Start the Flask development server:
 
     python app.py
