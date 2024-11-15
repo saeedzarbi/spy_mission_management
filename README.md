@@ -19,7 +19,6 @@ Installation and Setup
 1. Clone the Repository
 
     git clone https://github.com/saeedzarbi/spy_mission_management.git
-   
     cd spy-mission-management
 
 
