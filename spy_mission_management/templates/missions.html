@@ -1,0 +1,29 @@
+<!-- templates/missions.html -->
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <h2>Operations Briefing</h2>
+    <table class="table table-dark table-striped mt-4">
+        <thead>
+            <tr>
+                <th>Operation</th>
+                <th>Details</th>
+                <th>Assigned Agent</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for mission in missions %}
+                <tr>
+                    <td>{{ mission.title }}</td>
+                    <td>{{ mission.description }}</td>
+                    <td>{{ mission.assigned_to }}</td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="3">No operations available.</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

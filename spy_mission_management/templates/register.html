@@ -1,0 +1,25 @@
+<!-- templates/register.html -->
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <h2>Agent Enrollment</h2>
+    <form method="post" class="mt-4">
+        <div class="form-group">
+            <label>Codename:</label>
+            <input type="text" name="username" class="form-control" required placeholder="Choose a codename">
+        </div>
+        <div class="form-group">
+            <label>Passphrase:</label>
+            <input type="password" name="password" class="form-control" required placeholder="Create a passphrase">
+        </div>
+        <div class="form-group">
+            <label>Role:</label>
+            <select name="role" class="form-control">
+                <option value="Agent">Field Agent</option>
+                <option value="Analyst">Intelligence Analyst</option>
+            </select>
+        </div>
+        <input type="submit" value="Enroll Agent" class="btn btn-primary">
+    </form>
+</div>
+{% endblock %}

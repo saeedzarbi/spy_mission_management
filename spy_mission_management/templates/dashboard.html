@@ -1,0 +1,40 @@
+<!-- templates/dashboard.html -->
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <h1 class="display-4">Welcome, Agent {{ user['username'] }}</h1>
+    <p class="lead">Role: {{ user['role'] }}</p>
+
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <div class="card text-white bg-dark mb-3">
+                <div class="card-header">Operations</div>
+                <div class="card-body">
+                    <p class="card-text">Access your assigned operations and missions.</p>
+                    <a href="{{ url_for('missions_view') }}" class="btn btn-primary">View Operations</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-white bg-dark mb-3">
+                <div class="card-header">Gadgets</div>
+                <div class="card-body">
+                    <p class="card-text">Access your issued gadgets and equipment.</p>
+                    <a href="{{ url_for('equipments_view') }}" class="btn btn-primary">View Gadgets</a>
+                </div>
+            </div>
+        </div>
+        {% if user['role'] == 'M' %}
+        <div class="col-md-4">
+            <div class="card text-white bg-dark mb-3">
+                <div class="card-header">Command Center</div>
+                <div class="card-body">
+                    <p class="card-text">Manage missions and agents.</p>
+                    <a href="{{ url_for('add_mission') }}" class="btn btn-primary">Assign Mission</a>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

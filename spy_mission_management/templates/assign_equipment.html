@@ -1,0 +1,22 @@
+<!-- templates/assign_equipment.html -->
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <h2>Issue Gadget</h2>
+    <form method="post" class="mt-4">
+        <div class="form-group">
+            <label>Gadget Name:</label>
+            <input type="text" name="name" class="form-control" required placeholder="Enter gadget name">
+        </div>
+        <div class="form-group">
+            <label>Description:</label>
+            <textarea name="description" class="form-control" required placeholder="Enter gadget description"></textarea>
+        </div>
+        <div class="form-group">
+            <label>Issue To (Codename):</label>
+            <input type="text" name="assigned_to" class="form-control" required placeholder="Enter agent codename">
+        </div>
+        <input type="submit" value="Issue Gadget" class="btn btn-primary">
+    </form>
+</div>
+{% endblock %}
